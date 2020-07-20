@@ -2,7 +2,7 @@
 #include <LiquidCrystal_I2C.h>
 #include <Adafruit_MLX90614.h>
 
-#define I2C_ADDR 0x27 //I2C adress, you should use the code to scan the adress first (0x27) here
+#define I2C_ADDR 0x27 //I2C address, you should use the code to scan the adress first (0x27) here
 #define BACKLIGHT_PIN 3 // Declaring LCD Pins
 #define En_pin 2
 #define Rw_pin 1
