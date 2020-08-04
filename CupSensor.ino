@@ -13,7 +13,6 @@
 SR04 sr04 = SR04(ECHO_PIN,TRIG_PIN);
 
 void setup() {
-  pinMode(3, OUTPUT);
 }
 
 void loop() {
