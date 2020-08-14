@@ -1,13 +1,12 @@
 #include "SR04.h"
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
+// #include <LiquidCrystal_I2C.h>
 #include <Adafruit_MLX90614.h>
 #include <Servo.h>
 #include <Stepper.h>
 #include <dht_nonblocking.h>
 #include <IRremote.h>
 #include <IRremoteInt.h>
-
 #define TRIG_PIN 6
 #define ECHO_PIN 7 
 #define LIGHT_PIN 3
@@ -43,6 +42,7 @@ LiquidCrystal_I2C lcd(I2C_ADDR,En_pin,Rw_pin,Rs_pin,D4_pin,D5_pin,D6_pin,D7_pin)
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 IRrecv irrecv(RECEIVER);     // create instance of 'irrecv'
 decode_results results;      // create instance of 'decode_results'
+SR04 sr04 = SR04(ECHO_PIN,TRIG_PIN);
 
 // function prototypes
 void heat(int state, int &pulseState); // evals pulseState and turns heat on/off
@@ -154,7 +154,7 @@ void cool(int &state) {
     digitalWrite(DIRA,LOW); 
     digitalWrite(DIRB,HIGH);
   }
-  
+}
 //LCD control
 void LCD_write(int temperature){
     lcd.setCursor(0,0);
