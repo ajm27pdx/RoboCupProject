@@ -3,7 +3,7 @@
 Maintain temperature of liquid in a mug.
 
 ## Wiring Diagram
-![Wiring Diagram](wiring.npng)
+![Wiring Diagram](wiring.png)
 
 ## Libraries
 - SR04.zip -- Ultrasonic Proximity Sensor
